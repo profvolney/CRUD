@@ -41,9 +41,10 @@
             txtNome = new TextBox();
             pbFoto = new PictureBox();
             button1 = new Button();
-            dateTimePicker1 = new DateTimePicker();
+            dataNasc = new DateTimePicker();
             dataGridView1 = new DataGridView();
             label6 = new Label();
+            label7 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbFoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -52,9 +53,10 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(label7);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(dataGridView1);
-            panel1.Controls.Add(dateTimePicker1);
+            panel1.Controls.Add(dataNasc);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(pbFoto);
             panel1.Controls.Add(label5);
@@ -170,12 +172,12 @@
             button1.Text = "CADASTRAR";
             button1.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // dataNasc
             // 
-            dateTimePicker1.Location = new Point(73, 413);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(287, 23);
-            dateTimePicker1.TabIndex = 12;
+            dataNasc.Location = new Point(73, 413);
+            dataNasc.Name = "dataNasc";
+            dataNasc.Size = new Size(287, 23);
+            dataNasc.TabIndex = 12;
             // 
             // dataGridView1
             // 
@@ -194,6 +196,15 @@
             label6.Size = new Size(242, 33);
             label6.TabIndex = 14;
             label6.Text = "Tela de Cadastro";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(72, 395);
+            label7.Name = "label7";
+            label7.Size = new Size(98, 15);
+            label7.TabIndex = 15;
+            label7.Text = "Data Nascimento";
             // 
             // CRUD
             // 
@@ -225,8 +236,9 @@
         private TextBox txtEmail;
         private PictureBox pbFoto;
         private Button button1;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dataNasc;
         private DataGridView dataGridView1;
         private Label label6;
+        private Label label7;
     }
 }
