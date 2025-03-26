@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            label7 = new Label();
+            label6 = new Label();
+            dataGridView1 = new DataGridView();
+            dataNasc = new DateTimePicker();
+            button1 = new Button();
+            pbFoto = new PictureBox();
             label5 = new Label();
             txtSenha = new TextBox();
             label4 = new Label();
@@ -39,15 +45,9 @@
             txtEmail = new TextBox();
             txtSobrenome = new TextBox();
             txtNome = new TextBox();
-            pbFoto = new PictureBox();
-            button1 = new Button();
-            dataNasc = new DateTimePicker();
-            dataGridView1 = new DataGridView();
-            label6 = new Label();
-            label7 = new Label();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbFoto).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbFoto).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -74,6 +74,58 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 632);
             panel1.TabIndex = 0;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(72, 395);
+            label7.Name = "label7";
+            label7.Size = new Size(98, 15);
+            label7.TabIndex = 15;
+            label7.Text = "Data Nascimento";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Tahoma", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(315, 24);
+            label6.Name = "label6";
+            label6.Size = new Size(242, 33);
+            label6.TabIndex = 14;
+            label6.Text = "Tela de Cadastro";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(72, 472);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(668, 150);
+            dataGridView1.TabIndex = 13;
+            // 
+            // dataNasc
+            // 
+            dataNasc.Location = new Point(73, 413);
+            dataNasc.Name = "dataNasc";
+            dataNasc.Size = new Size(287, 23);
+            dataNasc.TabIndex = 12;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(523, 335);
+            button1.Name = "button1";
+            button1.Size = new Size(217, 45);
+            button1.TabIndex = 11;
+            button1.Text = "CADASTRAR";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // pbFoto
+            // 
+            pbFoto.Location = new Point(523, 83);
+            pbFoto.Name = "pbFoto";
+            pbFoto.Size = new Size(217, 232);
+            pbFoto.TabIndex = 10;
+            pbFoto.TabStop = false;
             // 
             // label5
             // 
@@ -155,57 +207,6 @@
             txtNome.Size = new Size(287, 23);
             txtNome.TabIndex = 0;
             // 
-            // pbFoto
-            // 
-            pbFoto.Location = new Point(523, 83);
-            pbFoto.Name = "pbFoto";
-            pbFoto.Size = new Size(217, 232);
-            pbFoto.TabIndex = 10;
-            pbFoto.TabStop = false;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(523, 335);
-            button1.Name = "button1";
-            button1.Size = new Size(217, 45);
-            button1.TabIndex = 11;
-            button1.Text = "CADASTRAR";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // dataNasc
-            // 
-            dataNasc.Location = new Point(73, 413);
-            dataNasc.Name = "dataNasc";
-            dataNasc.Size = new Size(287, 23);
-            dataNasc.TabIndex = 12;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(72, 472);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(668, 150);
-            dataGridView1.TabIndex = 13;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Tahoma", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(315, 24);
-            label6.Name = "label6";
-            label6.Size = new Size(242, 33);
-            label6.TabIndex = 14;
-            label6.Text = "Tela de Cadastro";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(72, 395);
-            label7.Name = "label7";
-            label7.Size = new Size(98, 15);
-            label7.TabIndex = 15;
-            label7.Text = "Data Nascimento";
-            // 
             // CRUD
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -214,10 +215,11 @@
             Controls.Add(panel1);
             Name = "CRUD";
             Text = "Tela de Cadastro";
+            Load += CRUD_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pbFoto).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbFoto).EndInit();
             ResumeLayout(false);
         }
 
