@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            btnDelete = new Button();
+            btnAtualizar = new Button();
             label7 = new Label();
             label6 = new Label();
-            dataGridView1 = new DataGridView();
+            dataGridView = new DataGridView();
             dataNasc = new DateTimePicker();
-            button1 = new Button();
+            btnCadastrar = new Button();
             pbFoto = new PictureBox();
             label5 = new Label();
             txtSenha = new TextBox();
@@ -45,19 +47,23 @@
             txtEmail = new TextBox();
             txtSobrenome = new TextBox();
             txtNome = new TextBox();
+            btnFoto = new Button();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbFoto).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(btnFoto);
+            panel1.Controls.Add(btnDelete);
+            panel1.Controls.Add(btnAtualizar);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(label6);
-            panel1.Controls.Add(dataGridView1);
+            panel1.Controls.Add(dataGridView);
             panel1.Controls.Add(dataNasc);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnCadastrar);
             panel1.Controls.Add(pbFoto);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(txtSenha);
@@ -74,6 +80,24 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(800, 632);
             panel1.TabIndex = 0;
+            // 
+            // btnDelete
+            // 
+            btnDelete.Location = new Point(392, 176);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(107, 62);
+            btnDelete.TabIndex = 17;
+            btnDelete.Text = "APAGAR";
+            btnDelete.UseVisualStyleBackColor = true;
+            // 
+            // btnAtualizar
+            // 
+            btnAtualizar.Location = new Point(392, 83);
+            btnAtualizar.Name = "btnAtualizar";
+            btnAtualizar.Size = new Size(107, 62);
+            btnAtualizar.TabIndex = 16;
+            btnAtualizar.Text = "ATUALIZAR";
+            btnAtualizar.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -94,13 +118,13 @@
             label6.TabIndex = 14;
             label6.Text = "Tela de Cadastro";
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(72, 472);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(668, 150);
-            dataGridView1.TabIndex = 13;
+            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView.Location = new Point(72, 472);
+            dataGridView.Name = "dataGridView";
+            dataGridView.Size = new Size(668, 150);
+            dataGridView.TabIndex = 13;
             // 
             // dataNasc
             // 
@@ -109,15 +133,15 @@
             dataNasc.Size = new Size(287, 23);
             dataNasc.TabIndex = 12;
             // 
-            // button1
+            // btnCadastrar
             // 
-            button1.Location = new Point(523, 335);
-            button1.Name = "button1";
-            button1.Size = new Size(217, 45);
-            button1.TabIndex = 11;
-            button1.Text = "CADASTRAR";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnCadastrar.Location = new Point(523, 395);
+            btnCadastrar.Name = "btnCadastrar";
+            btnCadastrar.Size = new Size(217, 45);
+            btnCadastrar.TabIndex = 11;
+            btnCadastrar.Text = "CADASTRAR";
+            btnCadastrar.UseVisualStyleBackColor = true;
+            btnCadastrar.Click += btnCadastrar_Click;
             // 
             // pbFoto
             // 
@@ -207,6 +231,16 @@
             txtNome.Size = new Size(287, 23);
             txtNome.TabIndex = 0;
             // 
+            // btnFoto
+            // 
+            btnFoto.Location = new Point(524, 329);
+            btnFoto.Name = "btnFoto";
+            btnFoto.Size = new Size(216, 45);
+            btnFoto.TabIndex = 18;
+            btnFoto.Text = "Escolher Foto";
+            btnFoto.UseVisualStyleBackColor = true;
+            btnFoto.Click += btnFoto_Click;
+            // 
             // CRUD
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -218,7 +252,7 @@
             Load += CRUD_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbFoto).EndInit();
             ResumeLayout(false);
         }
@@ -237,10 +271,13 @@
         private TextBox txtTelefone;
         private TextBox txtEmail;
         private PictureBox pbFoto;
-        private Button button1;
+        private Button btnCadastrar;
         private DateTimePicker dataNasc;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridView;
         private Label label6;
         private Label label7;
+        private Button btnAtualizar;
+        private Button btnDelete;
+        private Button btnFoto;
     }
 }

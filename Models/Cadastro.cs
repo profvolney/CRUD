@@ -33,8 +33,8 @@ namespace CRUD.Models
         [DisplayName("Senha")]
         public string Senha { get; set; }
         [Required]        
-        [DisplayName("Imagem")]
-        public Image Imagem { get; set; }
+        [DisplayName("Foto")]
+        public byte[] Foto { get; set; }
         [Required]        
         [DisplayName("DataNascimento")]
         public DateTime DataNasc { get; set; }
