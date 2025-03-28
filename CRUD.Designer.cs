@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            btnFoto = new Button();
             btnDelete = new Button();
             btnAtualizar = new Button();
             label7 = new Label();
@@ -47,7 +48,6 @@
             txtEmail = new TextBox();
             txtSobrenome = new TextBox();
             txtNome = new TextBox();
-            btnFoto = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbFoto).BeginInit();
@@ -81,6 +81,16 @@
             panel1.Size = new Size(800, 632);
             panel1.TabIndex = 0;
             // 
+            // btnFoto
+            // 
+            btnFoto.Location = new Point(524, 329);
+            btnFoto.Name = "btnFoto";
+            btnFoto.Size = new Size(216, 45);
+            btnFoto.TabIndex = 18;
+            btnFoto.Text = "Escolher Foto";
+            btnFoto.UseVisualStyleBackColor = true;
+            btnFoto.Click += btnFoto_Click;
+            // 
             // btnDelete
             // 
             btnDelete.Location = new Point(392, 176);
@@ -98,6 +108,7 @@
             btnAtualizar.TabIndex = 16;
             btnAtualizar.Text = "ATUALIZAR";
             btnAtualizar.UseVisualStyleBackColor = true;
+            btnAtualizar.Click += btnAtualizar_Click;
             // 
             // label7
             // 
@@ -230,16 +241,6 @@
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(287, 23);
             txtNome.TabIndex = 0;
-            // 
-            // btnFoto
-            // 
-            btnFoto.Location = new Point(524, 329);
-            btnFoto.Name = "btnFoto";
-            btnFoto.Size = new Size(216, 45);
-            btnFoto.TabIndex = 18;
-            btnFoto.Text = "Escolher Foto";
-            btnFoto.UseVisualStyleBackColor = true;
-            btnFoto.Click += btnFoto_Click;
             // 
             // CRUD
             // 
