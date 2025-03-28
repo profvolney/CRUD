@@ -1,12 +1,13 @@
 using MySql.Data.MySqlClient;
+using System.Configuration;
 using System.Data;
 
 namespace CRUD
 {
     public partial class CRUD : Form
     {
-        // Criando a variável que pega a conexão com o banco de dados.
-        string stgCon = "Server=127.0.0.1;Port=3307;Database=Crud;uid=root;Pwd=senacJBQ;";
+        // Criando a variável que pega a conexão com o banco de dados.   
+        string stgCon = ConfigurationManager.ConnectionStrings["stgCon"].ConnectionString;
         public CRUD()
         {
             InitializeComponent();
